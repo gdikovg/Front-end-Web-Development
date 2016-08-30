@@ -1,5 +1,14 @@
 {
-	"index": {
-	"pageTitle": "Home"
-	}
+    "index": {
+        "pageTitle": "Home"
+    },
+    "menu": {
+        "pageTitle": "Menu"
+    },
+    "about": {
+        "pageTitle": "About"
+    },
+    "contact": {
+        "pageTitle": "Contact"
+    }
 }
