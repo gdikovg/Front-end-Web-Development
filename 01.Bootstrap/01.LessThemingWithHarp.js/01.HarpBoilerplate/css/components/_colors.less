@@ -1,0 +1,15 @@
+/*Setting up the theme
+The final section is the theme, and it is totally optional. One thing that would be theme-specific is your color palette. I break my color palette into another Less file and import it under the modules section.You may be wondering what goes into this colors.less file, since we have defined our colors in the _variables.less file. In the variables file, we only assign hexadecimal numbers to variables. In the colors.less file, I assign these variable names to actual CSS classes so that we can use them in our layouts. In this way, we stay more modular because we can assign a color class to a widget instead of putting the color in the widget's CSS layout code.*/
+
+.red1 {
+color: @red1;
+}
+.red1-bg {
+background: @red1;
+}
+.red2 {
+color: @red2;
+}
+.red2-bg {
+background: @red2;
+}
