@@ -1,0 +1,19 @@
+//Border radius
+/*Make sure you set this up and use it for everything. If you are thorough, you can change the border radius of all elements in one place. Now, if I change my @radius value to a different pixel amount, it will inherit down to my button corners. Do this for all your Bootstrap components!*/
+
+.round-corners (@radius: 2px) {
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	border-radius: @radius;
+}
+
+//Animations and transitions
+/*I find that a little transition, when added, can add a lot to a UI. Instead of defining this from the ground up on every component, use this simple mixin. It will speed up your theming time and also ensure that transitions are consistent across your entire theme. That's just good design and coding.*/
+
+.transition (@transition: background .1s linear) {
+	-moz-transition: @transition;
+	-webkit-transition: @transition;
+	transition: background @transition;
+}
+
+
