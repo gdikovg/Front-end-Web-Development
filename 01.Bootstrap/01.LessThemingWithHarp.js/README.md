@@ -241,7 +241,7 @@ h1 {
 }
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
-version 0.1- Create Home page. In the next step, we'll work on customizing "index.ejs". The home page for the restaurant website will be split into four main parts:
+version 0.1- Create Home page. In the next step, I work on customizing "index.ejs". The home page for the restaurant website will be split into four main parts:
 
 1.Adding the primary header image.
 
@@ -268,10 +268,6 @@ version 0.1- Create Home page. In the next step, we'll work on customizing "inde
 	height: auto;
 }
 
-1.3.Insert the actual image into our "layout.ejs".
-
-<img src="img/banner.jpg" width="1170" height="500" alt="Public Restaurant Banner">
-
 2.An "about the restaurant" statement.
 
 2.1.Let's update "index.ejs".
@@ -287,7 +283,7 @@ version 0.1- Create Home page. In the next step, we'll work on customizing "inde
 					class .col-lg-offset-3 . Using the offset class, I can now center my paragraph
 					in the layout.-->
 					<div class="col-lg-6 col-lg-offset-3">
-					<h4>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis 						egestas.</h4>
+					<h4>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h4>
 					</div>
 				</div>
 			</div>
@@ -310,30 +306,30 @@ version 0.1- Create Home page. In the next step, we'll work on customizing "inde
 	<div class="row">
 		<div class="col-lg-3">
 			<a href="menu.html">
-				<img src="img/food-feature1.jpg" height="250" alt="Food Feature
+				<img src="img/food-feature1.jpg" width="250" height="250" alt="Food Feature 1">
 			</a>
-			<h4>Sandwich</h4>
+			<h4>Bird</h4>
 		</div>
 
 		<div class="col-lg-3">
 			<a href="menu.html">
-				<img src="img/food-feature2.jpg" height="250" alt="Food Feature
-			</a>
-			<h4>Dessert</h4>
-		</div>
-
-		<div class="col-lg-3">
-			<a href="menu.html">
-				<img src="img/food-feature3.jpg" height="250" alt="Food Feature
-			</a>
-			<h4>Salad</h4>
-		</div>
-
-		<div class="col-lg-3">
-			<a href="menu.html">
-				<img src="img/food-feature4.jpg" height="250" alt="Food Feature
+				<img src="img/food-feature2.jpg" width="250" height="250" alt="Food Feature 2">
 			</a>
 			<h4>Coffee</h4>
+		</div>
+
+		<div class="col-lg-3">
+			<a href="menu.html">
+				<img src="img/food-feature3.jpg" width="250" height="250" alt="Food Feature 3">
+			</a>
+			<h4>Peach</h4>
+		</div>
+
+		<div class="col-lg-3">
+			<a href="menu.html">
+				<img src="img/food-feature4.jpg" width="250" height="250" alt="Food Feature 4">
+			</a>
+			<h4>Rose</h4>
 		</div>
 	</div>
 </div>
@@ -355,55 +351,49 @@ version 0.1- Create Home page. In the next step, we'll work on customizing "inde
 4.1.Let's update "index.ejs".
 
 <div class="reviews">
-<div class="row">
-<div class="col-lg-12">
-<div class="text-center">
-<h2>Reviews</h2>
-<div id="carousel-reviews" class="carousel slide" data-
-ride="carousel">
-<!-- Indicators -->
-<ol class="carousel-indicators">
-<li data-target="#carousel-reviews" data-slide-
-to="0" class="active"></li>
-<li data-target="#carousel-reviews" data-slide-
-to="1"></li>
-<li data-target="#carousel-reviews" data-slide-
-to="2"></li>
-</ol>
-<!-- Wrapper for slides -->
-<div class="carousel-inner" role="listbox">
-<div class="item active">
-<p>This is the best sandwich I've ever had! I
-Highly recommend trying the chicken sandwich
-for lunch.</p>
-</div>
-<div class="item">
-<p>The desserts are to die for. Make sure you
-save enough room after you eat your dinner.</p>
-</div>
-<div class="item">
-<p>They have some of the best locally brewed
-coffee I have ever tasted. So fresh and eye
-opening early in the morning.</p>
-</div>
-</div>
-<!-- Controls -->
-<a class="left carousel-control" href="#carousel-
-reviews" role="button" data-slide="prev">
-<span class="glyphicon glyphicon-chevron-left"
-aria-hidden="true"></span>
-<span class="sr-only">Previous</span>
-</a>
-<a class="right carousel-control" href="#carousel-
-reviews" role="button" data-slide="next">
-<span class="glyphicon glyphicon-chevron-right"
-aria-hidden="true"></span>
-<span class="sr-only">Next</span>
-</a>
-</div>
-</div>
-</div>
-</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="text-center">
+				<h2>Reviews</h2>
+
+				<div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-reviews" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-reviews" data-slide-to="1"></li>
+						<li data-target="#carousel-reviews" data-slide-to="2"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<p>This is the best sandwich I've ever had! I Highly recommend trying the chicken 								sandwich for lunch.</p>
+						</div>
+						<div class="item">
+							<p>The desserts are to die for. Make sure you save enough room after you eat your 								dinner.</p>
+						</div>
+
+						<div class="item">
+							<p>They have some of the best locally brewed coffee I have ever tasted. So fresh and eye
+							opening early in the morning.</p>
+						</div>
+					</div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+
+					<a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 4.2.Let's update "theme.less".
@@ -414,5 +404,78 @@ aria-hidden="true"></span>
 }
 
 4.3.Create a new Less file called "_carousel.less" and save it in the "css / components" directory.
+
+.carousel .item {
+	padding: @padding (@padding * 12) (@padding * 4) (@padding * 12);
+	font-size: (@font-size * 1.5);
+}
+
+.carousel-control.right,
+	.carousel-control.left {
+		background-image: none;
+	}
+
+a.carousel-control {
+	color: @light-grey;
+}
+
+.carousel-indicators li {
+	border: @border-size @border-color @border-type;
+}
+
+.carousel-indicators .active {
+	background: @light-grey;
+}
+
+
+4.4.Import that file into "theme.less" in part "3.Module rules"
+
+@import "components/_carousel.less";
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+version 0.2- Create About page. In the next step, I work on customizing "index.ejs". This page will feature a two-column layout and some custom text styles to give it a unique look:
+
+1.Create new file in main directory called "about.ejs".
+
+2.Changing the feature image- added next line in "about.ejs".
+
+<!-- Adding the primary header image -->
+<div class="public-banner">
+	<div class="row">
+		<div class="col-lg-12">
+			<img src="img/banner-about.jpg" width="1170" height="500" alt="Public Restaurant About Banner">
+		</div>
+	</div>
+</div>
+
+3.Set up our two-column layout
+
+3.1.Let's update "about.ejs".
+
+<div class="page-body">
+
+3.2.Let's update "theme.less". 
+
+.page-body {
+	padding: (@padding * 4);
+}
+
+4.Setting up the large subtitle.
+
+4.1.Let's update "about.ejs".
+
+<h2 class="large">Great food, great people, good times.</h2>
+
+4.2.Open up the type component named "_typography.less" and add:
+
+h2 {
+	font-weight: 900;
+}
+
+.large {
+	font-size: (@font-size * 4);
+} 
+
+
 
 
