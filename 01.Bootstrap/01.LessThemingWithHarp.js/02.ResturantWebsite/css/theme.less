@@ -74,6 +74,37 @@ body {
 	color: @grey;
 }
 
+// here - allows image to go right to the edge
+.public-banner .col-lg-12 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.public-banner img {
+	width: 100%;
+	height: auto;
+}
+
+// add some padding around the about headline
+.home-about {
+	padding: (@padding * 4) 0 (@padding * 6) 0;
+}
+
+// center all items
+.home-food {
+	text-align: center;
+}
+
+// add a little extra padding under images
+.home-food img {
+	padding-bottom: @padding;
+}
+
+// add review padding consistent with about
+.reviews {
+	padding: (@padding * 4) 0 (@padding * 6) 0;
+}
+
 
 //2.Layout rules
 /*The layout section is dedicated to any custom classes that you've written for the layout of your project. This could be something simple, such as a header, or something more complex, such as a widget. If you're following best practices, your layout should only use classes. However, if you have used some IDs, you should include them here as well.*/
@@ -83,6 +114,7 @@ body {
 /*This section should be a list of @import keywords that load into our Less component files. This is the big one for Bootstrap, because this is where you should import all your component Less files. As I mentioned earlier, you should break down any custom Bootstrap component CSS into its own Less file and save it in the /components directory. This is the way to keep your CSS neat and tidy in the development version of your theme. On compile, all of these Less files will be combined into a single CSS file called theme.css . However, for development purposes, it makes a ton of sense to break down the CSS for easier maintenance and writing. When you're creating a component Less file, first save it at css / components , and then use the @import keyword to import it into theme.less.*/
 
 @import "components/_typography.less";
+@import "components/_carousel.less";
 
 /*Setting up the theme: The final section is the theme, and it is totally optional. One thing that would be theme-specific is your color palette. I break my color palette into another Less file and import it under the modules section.You may be wondering what goes into this colors.less file, since we have defined our colors in the _variables.less file. In the variables file, we only assign hexadecimal numbers to variables. In the colors.less file, I assign these variable names to actual CSS classes so that we can use them in our layouts. In this way, we stay more modular because we can assign a color class to a widget instead of putting the color in the widget's CSS layout code.*/
 @import "components/_colors.less";

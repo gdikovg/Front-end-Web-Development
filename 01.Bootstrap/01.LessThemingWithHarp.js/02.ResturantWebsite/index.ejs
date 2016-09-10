@@ -1,5 +1,112 @@
+<!-- Adding the primary header image -->
+<div class="public-banner">
+	<div class="row">
+		<div class="col-lg-12">
+			<img src="img/banner.jpg" width="1170" height="500" alt="Public Restaurant Banner">
+		</div>
+	</div>
+</div>
 
+<!-- Adding "about the restaurant" statement -->
+<div class="home-about">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="text-center">
+				<h2>About</h2>
+				<div class="row">
+					<!-- I'd like the width of the text column to be half the width of the layout, so I'll use
+					the .col-lg-6 grid class. To center the text column in the layout, I'll use the offset
+					class .col-lg-offset-3 . Using the offset class, I can now center my paragraph
+					in the layout.-->
+					<div class="col-lg-6 col-lg-offset-3">
+					    <h4>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
+<!-- Food thumbnails that will link to our menu page -->
+<div class="home-food">
+	<div class="row">
+		<div class="col-lg-3">
+			<a href="menu.html">
+				<img src="img/food-feature1.jpg" width="250" height="250" alt="Food Feature 1">
+			</a>
+			<h4>Bird</h4>
+		</div>
+
+		<div class="col-lg-3">
+			<a href="menu.html">
+				<img src="img/food-feature2.jpg" width="250" height="250" alt="Food Feature 2">
+			</a>
+			<h4>Coffee</h4>
+		</div>
+
+		<div class="col-lg-3">
+			<a href="menu.html">
+				<img src="img/food-feature3.jpg" width="250" height="250" alt="Food Feature 3">
+			</a>
+			<h4>Peach</h4>
+		</div>
+
+		<div class="col-lg-3">
+			<a href="menu.html">
+				<img src="img/food-feature4.jpg" width="250" height="250" alt="Food Feature 4">
+			</a>
+			<h4>Rose</h4>
+		</div>
+	</div>
+</div>
+
+<!-- Bootstrap reviews carousel -->
+
+<div class="reviews">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="text-center">
+				<h2>Reviews</h2>
+
+				<div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-reviews" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-reviews" data-slide-to="1"></li>
+						<li data-target="#carousel-reviews" data-slide-to="2"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<p>This is the best sandwich I've ever had! I Highly recommend trying the chicken 								sandwich for lunch.</p>
+						</div>
+						<div class="item">
+							<p>The desserts are to die for. Make sure you save enough room after you eat your 								dinner.</p>
+						</div>
+
+						<div class="item">
+							<p>They have some of the best locally brewed coffee I have ever tasted. So fresh and eye
+							opening early in the morning.</p>
+						</div>
+					</div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+
+					<a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
