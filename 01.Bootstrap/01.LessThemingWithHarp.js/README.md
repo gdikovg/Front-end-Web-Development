@@ -433,11 +433,9 @@ a.carousel-control {
 @import "components/_carousel.less";
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
-version 0.2- Create About page. In the next step, I work on customizing "index.ejs". This page will feature a two-column layout and some custom text styles to give it a unique look:
+version 0.2- Create About page. In the next step, I work on customizing "index.ejs". This page will feature a two-column layout and some custom text styles to give it a unique look.Create new file in main directory called "about.ejs".
 
-1.Create new file in main directory called "about.ejs".
-
-2.Changing the feature image- added next line in "about.ejs".
+Changing the feature image- added next line in "about.ejs".
 
 <!-- Adding the primary header image -->
 <div class="public-banner">
@@ -448,25 +446,34 @@ version 0.2- Create About page. In the next step, I work on customizing "index.e
 	</div>
 </div>
 
-3.Set up our two-column layout
+Reviewing the layout
 
-3.1.Let's update "about.ejs".
+<div class="row">
+	<div class="col-lg-5">left col</div>
+	<div class="col-lg-6 col-lg-offset-1">right col</div>
+</div>
 
-<div class="page-body">
+1.Left Column
 
-3.2.Let's update "theme.less". 
+1.1.Set up our two-column layout
+
+1.1.1.Let's update "about.ejs".
+
+<div class="page-body">insert h2, social media and contact </div>
+
+1.1.2.Let's update "theme.less". 
 
 .page-body {
 	padding: (@padding * 4);
 }
 
-4.Setting up the large subtitle.
+1.2.Setting up the large subtitle.
 
-4.1.Let's update "about.ejs".
+1.2.1.Let's update "about.ejs".
 
 <h2 class="large">Great food, great people, good times.</h2>
 
-4.2.Open up the type component named "_typography.less" and add:
+1.2.2.Open up the type component named "_typography.less" and add:
 
 h2 {
 	font-weight: 900;
@@ -476,6 +483,104 @@ h2 {
 	font-size: (@font-size * 4);
 } 
 
+1.3.Adding the social media icons
 
+1.3.1.Let's update "about.ejs".
 
+<div class="about-social-media">
+	<a href="#"><i class="fa fa-facebook"></i></a>
+	<a href="#"><i class="fa fa-twitter"></i></a>
+	<a href="#"><i class="fa fa-pinterest"></i></a>
+	<a href="#"><i class="fa fa-instagram"></i></a>
+</div>
 
+1.3.2.Let's update "theme.less". 
+
+.about-social-media {
+	margin: (@margin * 2) 0;
+	font-size: (@font-size * 2);
+}
+
+1.4.Adding the address- The last part of the left-hand-side column
+
+1.4.1.Let's update "about.ejs".
+
+<p>
+<small>
+	Public Restaurant<br/>
+	Bulgaria<br/>
+	Pernik<br/>
+	jk."Tvardi livadi"
+</small>
+</p>
+
+2.Right Column
+2.1.Inserting the About text
+
+2.1.1.Let's update "about.ejs".
+
+<div class="page-body">insert h3, h4, p </div>
+
+2.1.2.Let's update "about.ejs".
+
+<h3>Our Story</h3>
+<h4>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,  ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</h4>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam
+erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+2.1.3.Let's update "theme.less".
+
+h3 {
+	font-weight: 700;
+	color: @red1;
+}
+
+h4 {
+	line-height: 1.5
+}
+
+! Don't forget the modal- The last thing that we need to do for this page is copy and paste the reservation modal code at the bottom. I would actually drop this modal code into a new partial and then just import it into the page.
+
+1.Create a new file at /partial called _reservation-modal.ejs:
+
+<!-- reservation modal //-->
+<div class="modal fade" id="reservation-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+				aria-label="Close"><span aria-
+				hidden="true">&times;</span></button>
+				<h4 class="modal-title">Book Reservation</h4>
+			</div>
+
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label>Name</label>
+						<input type="text" class="form-control" placeholder="Enter your name">
+					</div>
+
+					<div class="form-group">
+						<label>Date</label>
+						<input type="text" class="form-control" placeholder="Enter your date">
+					</div>
+
+					<div class="form-group">
+						<label>Guests</label>
+						<input type="text" class="form-control" placeholder="Enter the number of guests">
+					</div>
+				</form>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Submit</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+Go back to "about.ejs" and insert this line of code at the very bottom of your file:
+
+<%- partial("partial/_reservation-modal") %>
