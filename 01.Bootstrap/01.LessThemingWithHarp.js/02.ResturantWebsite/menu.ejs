@@ -1,0 +1,144 @@
+<div class="container">
+    <!-- page body //-->
+    <div class="page-body">
+        <!-- appetizers //-->
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Appetizers</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>Garlic Bread</h3>
+                <p>Delicious pan fried bread with olive oil.</p>
+                <p class="price">$7</p>
+            </div>
+            <div class="col-lg-4">
+                <h3>Chicken Wings</h3>
+                <p>One dozen wings, come in hot or bbq flavour.</p>
+                <p class="price">$12</p>
+            </div>
+            <div class="col-lg-4">
+                <h3>Nachos</h3>
+                <p>Great for sharing with friends. Tons of cheese and all the toppings.</p>
+                <p class="price">$14</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>Yam Fries</h3>
+                <p>Servied with garlic mayo for dipping.</p>
+                <p class="price">$8</p>
+            </div>
+            <div class="col-lg-4">
+                <h3>Green Salad</h3>
+                <p>A great healthy start to your meal. <a href="#" data-toggle="modal" data-target="#salad-modal">View</a></p>
+                <p class="price">$9</p>
+            </div>
+            <div class="col-lg-4">
+                <h3>Chips &amp; Salsa</h3>
+                <p>Crisp tortilla chips and dip.</p>
+                <p class="price">$6</p>
+            </div>
+        </div>
+        
+        <!-- sandwiches //-->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Sandwiches <small>All sandwiches are served with yam fries or salad.</small></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>Veggie</h3>
+                <p>tomatoes, lettuce, cheese, salsa. <a href="#" data-toggle="modal" data-target="#sandwich-modal">View</a></p>
+                <p class="price">$12</p>
+            </div>
+            <div class="col-lg-4">
+                <h3>Turkey</h3>
+                <p>turkey, lettuce, cranberry, cheese, tomato.</p>
+                <p class="price">$14</p>
+            </div>
+            <div class="col-lg-4">
+                <h3>Roast Beef</h3>
+                <p>roast beef, mustard, pickles.</p>
+                <p class="price">$14</p>
+            </div>
+        </div>
+        
+        <!-- burgers //-->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Burgers <small>All burgers are served with yam fries or salad.</small></h2> 
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4">
+                    <h3>Beef</h3>
+                    <p>tomatoes, lettuce, cheese, pickles.</p>
+                    <p class="price">$16</p>
+                </div>
+                <div class="col-lg-4">
+                    <h3>Chicken</h3>
+                    <p>lettuce, cucumber, pickles.</p>
+                    <p class="price">$16</p>
+                </div>
+                <div class="col-lg-4">
+                    <h3>Veggie</h3>
+                    <p>lettuce, mushrooms, salsa.</p>
+                    <p class="price">$14</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- partial("partial/_reservation-modal") %>
+   
+    <!-- salad modal //-->
+    <div class="modal fade" id="salad-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Appetizer</h4>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="text-center">
+                        <p><img src="img/salad.jpg" width="400" height="267" alt="Salad"></p>
+                        <h2>Green Salad</h2>
+                        <p>A great healthy start to your meal.</p>
+                        <p class="price">$9</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    
+    <!-- sandwich modal //-->
+    <div class="modal fade" id="sandwich-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Sandwiches</h4> </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <p><img src="img/sandwich.jpg" width="400" height="274" alt="Sandwich"></p>
+                        <h2>Veggie Sandwich</h2>
+                        <p>tomatoes, lettuce, cheese, salsa.</p>
+                        <p class="price">$12</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
