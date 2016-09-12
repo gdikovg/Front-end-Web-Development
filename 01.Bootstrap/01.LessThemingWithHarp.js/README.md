@@ -433,7 +433,7 @@ a.carousel-control {
 @import "components/_carousel.less";
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
-version 0.2- Create About page. In the next step, I work on customizing "index.ejs". This page will feature a two-column layout and some custom text styles to give it a unique look.Create new file in main directory called "about.ejs".
+version 0.2- Create About page. In the next step, I work on customizing "index.ejs". This page will feature a two-column layout and some custom text styles to give it a unique look. Create new file in main directory called "about.ejs".
 
 Changing the feature image- added next line in "about.ejs".
 
@@ -584,3 +584,116 @@ h4 {
 Go back to "about.ejs" and insert this line of code at the very bottom of your file:
 
 <%- partial("partial/_reservation-modal") %>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+version 0.3- Create Menu page. I'll use a three-column layout combined with some additional modal popups for our featured dishes. Create new file in main directory called "menu.ejs".
+
+1.Customizing the .page-header class
+
+1.1.Let's update "menu.ejs".
+
+<h2 class="page-header">Appetizers</h2>
+
+1.2.Let's update "theme.less".
+
+.page-header {
+	padding-bottom: (@padding * 1.5);
+	margin: @margin 0;
+	border-bottom: (@border-size * 5) @border-type @border-color;
+}
+
+2.Setting up the layout
+
+2.1.Let's update "menu.ejs".
+
+<div class="row">
+	<div class="col-lg-12">
+		<h2 class="page-header">Appetizers</h2>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-4">
+		<h3>Item Name</h3>
+		<p>Item description goes here.</p>
+		<p class="price">$5</p>
+	</div>
+
+	<div class="col-lg-4">
+		<h3>Item Name</h3>
+		<p>Item description goes here.</p>
+		<p class="price">$5</p>
+	</div>
+
+	<div class="col-lg-4">
+		<h3>Item Name</h3>
+		<p>Item description goes here.</p>
+		<p class="price">$5</p>
+	</div>
+</div>
+
+1.2.Let's update "theme.less".
+
+.price {
+	color: @red1;
+	font-weight: 700;
+}
+
+3.Adding the featured modal
+
+3.1.Let's update "menu.ejs".
+
+<div class="col-lg-4">
+	<h3>Green Salad</h3>
+	<p>A great healthy start to your meal. <a href="#" data-toggle="modal" data-target="#salad-modal">View</a></p>
+	<p class="price">$9</p>
+</div>
+
+<!-- salad modal //-->
+<div class="modal fade" id="salad-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Appetizer</h4>
+			</div>
+
+			<div class="modal-body">
+				<div class="text-center">
+					<p><img src="img/salad.jpg" width="400" height="267" alt="Salad"></p>
+					<h2>Green Salad</h2>
+					<p>A great healthy start to your meal.</p>
+					<p class="price">$9</p>
+				</div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- sandwich modal //-->
+<div class="modal fade" id="sandwich-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Sandwiches</h4>
+			</div>
+
+			<div class="modal-body">
+				<div class="center">
+					<p><img src="img/sandwich.jpg" width="400" height="274"
+					alt="Sandwich"></p>
+					<h2>Veggie Sandwich</h2>
+					<p>tomatoes, lettuce, cheese, salsa.</p>
+					<p class="price">$12</p>
+				</div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+version 0.4- Create Contact page.
