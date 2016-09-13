@@ -729,3 +729,91 @@ version 0.4- Create Contact page. Create new file in main directory called "cont
 </div>
 
 <%- partial("partial/_reservation-modal") %>
+
+03.Mobile First
+-----------------------------------------------------------------------------------------------------------------------------------------------
+version 0.0- I build a mobile first aggregator website template. I'll cover using some custom JavaScript to improve the UI and use a flat Google material inspired design.
+
+1.Starting with Boilerplate
+
+2.Update some of the basic template files
+2.1.Adding a new web font- include the following line of code in the "_layout.ejs".
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,900' rel='stylesheet' type='text/css'>
+
+2.2.Adding the JavaScript to "_layout.ejs". 
+Insert the following code at the bottom of "_layout.ejs" after jQuery:
+
+<script>
+	$(document).ready(function() {
+		$("#header-search").hide();
+		$("#search-trigger").on("click", function() {
+			$("#header-search").toggle();
+		});
+	});
+</script>
+
+2.3.Updating the "_variables.less".- Add more colors for material design:
+
+2.3.1.Colors
+
+@md-black: #212121;
+@md-dark-blue: #303f9f;
+@md-blue: #3f51b5;
+@md-light-blue: #c5cae9;
+@md-pink: #ff4081;
+@md-grey: #727272;
+@md-light-grey: #b6b6b6;
+
+2.3.2.Text colors
+
+@primary-text: @md-black;
+@light-text: @md-grey;
+@loud-text: @md-black;
+@inverse-text: @white;
+@heading-text: @md-dark-blue;
+
+2.3.3.Link colors
+
+@primary-link-color: @md-blue;
+@primary-link-color-hover: @md-grey;
+
+2.3.4.Border colors
+
+@border-color: @md-light-grey;
+@border-size: 1px;
+@border-type: solid;
+@border-focus: @md-blue;
+@secondary-border-color: @md-blue;
+
+2.3.5.Typography
+
+@body-copy: "Roboto", helvetica, arial, verdana, sans-serif;
+@heading-copy: "Roboto", helvetica, arial, verdana, sans-serif;
+@heading-copy-bold: "Roboto", helvetica, arial, verdana, sans-serif;
+@base-font-size: 14px;
+@font-size: 1em;
+@base-line-height: 1.5;
+
+2.3.6.Mixins
+
+// round corners or Border radius
+.round-corners (@radius: 2px) {
+-moz-border-radius: @radius;
+-ms-border-radius: @radius;
+border-radius: @radius;
+}
+
+// animation transitions
+.transition (@transition: background .1s linear) {
+-moz-transition: @transition;
+-webkit-transition: @transition;
+transition: background @transition;
+}
+
+2.4.Setting up the header
+
+
+
+
+
