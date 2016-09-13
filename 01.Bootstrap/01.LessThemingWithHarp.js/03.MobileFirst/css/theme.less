@@ -1,0 +1,81 @@
+//I organized the theme using the Scalable and Modular CSS (SMACSS) system.
+
+//1.Base rules
+/*A base rule applies to any element that is an element selector, descendent selector, child selector, or pseudo-class. It doesn't apply to CSS classes or IDs. These are basically all your core HTML tags.*/
+
+body {
+	/*We'll set our background to the @primary-background variable. The @ primary-background variable should be set to the color you want 		for the background of your project.*/
+	background: @primary-background;
+	/*We set the font-family property to our @body-copy variable.*/	
+	font-family: @body-copy;
+	/*Set the font-size property to the @base-font-size variable. Remember that this is the one that has the pixel value, and it should be 		a value of this type on the body tag. In any future use of the font-size property, you should use the @font-size variable.*/
+	font-size: @base-font-size;
+	/*The line-height is set using the @base-line-height variable.*/
+	line-height: @base-line-height;
+	/*Finally, we'll set the font color to our @primary-text variable.*/
+	color: @primary-text;
+}
+
+ul,
+ol {
+}
+
+li {
+}
+
+a, a:link, a:visited {
+}
+
+a:hover {
+}
+
+p {
+}
+
+hr {
+}
+
+.btn {
+	/* fill in the rest of the styles here */
+	.round-corners;
+	.transition;
+}
+
+//2.Layout rules
+/*The layout section is dedicated to any custom classes that you've written for the layout of your project. This could be something simple, such as a header, or something more complex, such as a widget. If you're following best practices, your layout should only use classes. However, if you have used some IDs, you should include them here as well.*/
+
+/*
+02. LAYOUT
+Styles specific to your layout or website
+*/
+
+//3.Module rules
+/*This section should be a list of @import keywords that load into our Less component files. This is the big one for Bootstrap, because this is where you should import all your component Less files. As I mentioned earlier, you should break down any custom Bootstrap component CSS into its own Less file and save it in the /components directory. This is the way to keep your CSS neat and tidy in the development version of your theme. On compile, all of these Less files will be combined into a single CSS file called theme.css . However, for development purposes, it makes a ton of sense to break down the CSS for easier maintenance and writing. When you're creating a component Less file, first save it at css / components , and then use the @import keyword to import it into theme.less.*/
+
+/*
+@import "components/_badges.less";
+@import "components/_typography.less";
+@import "components/_tables.less";
+...
+*/
+
+/*Setting up the theme: The final section is the theme, and it is totally optional. One thing that would be theme-specific is your color palette. I break my color palette into another Less file and import it under the modules section.You may be wondering what goes into this colors.less file, since we have defined our colors in the _variables.less file. In the variables file, we only assign hexadecimal numbers to variables. In the colors.less file, I assign these variable names to actual CSS classes so that we can use them in our layouts. In this way, we stay more modular because we can assign a color class to a widget instead of putting the color in the widget's CSS layout code.*/
+@import "components/_colors.less";
+
+//4.State rules
+/*These styles refer to anything that applies to a state change, such as form validation or alert bars. With Bootstrap, the States section works much like modules, but I like to divide the following two components into the states section. These two make sense from a Bootstrap component standpoint. If you are using a different JavaScript library to perform your form validation, you should include the corresponding styles here. This should also apply for any component that has a state change.*/
+
+/*
+@import "components/_alerts.less";
+@import "components/_form-validation.less";
+...*/
+
+//5.Theme rules
+/*This part of your style sheet is optional. You may cover it in the preceding sections. The first thing we need to do is import the _variables.less file that we created. We want this to be the first thing that we load into the theme.*/
+
+
+@import "components/_variables";
+@import "components/_mixins";
+
+/*Setting up the theme: */
+
