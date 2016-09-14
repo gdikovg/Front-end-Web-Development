@@ -41,6 +41,46 @@ hr {
 	.transition;
 }
 
+.header {
+	margin-bottom: (@margin * 2);
+}
+
+.header-nav {
+	background: @md-blue;
+}
+
+#header-search {
+    height: 60px;
+    background: @secondary-background;
+    padding: 0 (@padding * 1.5);
+}
+
+.container {
+    padding: 0 100px;
+}
+
+#header-search .input-group {
+    margin-top: 13px;
+}
+
+footer {
+	margin-top: (@margin * 6);
+	padding-bottom: (@padding * 6);
+	padding-top: (@padding * 2);
+	background: @md-grey;
+	color: @md-light-grey;
+	text-align: center;
+}
+
+footer a {
+    font-size: (@font-size * 2);
+    color: @md-light-grey;
+}	
+
+footer a:hover {
+    color: @inverse-text;
+}
+
 //2.Layout rules
 /*The layout section is dedicated to any custom classes that you've written for the layout of your project. This could be something simple, such as a header, or something more complex, such as a widget. If you're following best practices, your layout should only use classes. However, if you have used some IDs, you should include them here as well.*/
 
@@ -73,9 +113,7 @@ Styles specific to your layout or website
 //5.Theme rules
 /*This part of your style sheet is optional. You may cover it in the preceding sections. The first thing we need to do is import the _variables.less file that we created. We want this to be the first thing that we load into the theme.*/
 
-
 @import "components/_variables";
-@import "components/_mixins";
 
 /*Setting up the theme: */
 

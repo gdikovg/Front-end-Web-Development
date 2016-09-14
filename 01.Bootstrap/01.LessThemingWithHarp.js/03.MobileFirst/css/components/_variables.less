@@ -82,3 +82,19 @@
 
 @margin: 1em;
 @padding: 1em;
+
+//Mixins
+
+// round corners or Border radius
+.round-corners (@radius: 2px) {
+-moz-border-radius: @radius;
+-ms-border-radius: @radius;
+border-radius: @radius;
+}
+
+// animation transitions
+.transition (@transition: background .1s linear) {
+-moz-transition: @transition;
+-webkit-transition: @transition;
+transition: background @transition;
+}
