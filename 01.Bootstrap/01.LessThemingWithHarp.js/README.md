@@ -813,7 +813,222 @@ transition: background @transition;
 
 2.4.Setting up the header
 
+2.4.1.Let's update "_header.ejs".
 
+<div class="header">
+	<div class="header-nav">
+		<div id="header-search">
+			<div class="header-filters">
+			</div>
+		</div>
+	</div>
+</div>
 
+2.4.2.Let's update "theme.less".
+
+.header {
+	margin-bottom: (@margin * 2);
+}
+
+.header-nav {
+	background: @md-blue;
+}
+
+2.5. Setting up the Navbar
+
+2.5.1.Let's update "header.ejs".
+
+<nav class="navbar navbar-default">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">Agger</a> </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" data-toggle="modal" data- target="#about-modal">About</a></li>
+                                <li><a href="#" data-toggle="modal" data- target="#contact-modal">Contact</a></li>
+                                <li><a href="#" data-toggle="modal" data- target="#login-modal">Login / Register</a></li>
+                                <li><a href="#" id="search-trigger"><i class="fa fa-search"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+2.5.2.Let's update "theme.less".
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.navbar-default,
+	.navbar-default .navbar-collapse,
+	.navbar-default .navbar-form {
+		background: @md-blue;
+		text-transform: uppercase;
+}
+
+.navbar-default .navbar-brand {
+	color: @inverse-text;
+	font-weight: 700;
+	}
+
+.navbar-default .navbar-brand:focus,
+	.navbar-default .navbar-brand:hover {
+		color: @md-light-blue;
+	}
+
+.navbar-default {
+	border-color: @md-blue;
+	}
+
+.navbar-default .navbar-nav > li > a {
+		color: @md-light-blue;
+		text-transform: uppercase;
+	}
+
+.navbar-default .navbar-nav > li > a:focus,
+	.navbar-default .navbar-nav > li > a:hover {
+		color: @inverse-text;
+	}
+
+.navbar-default .navbar-toggle,
+	.navbar-default .navbar-toggle .icon-bar {
+		border-color: @md-blue;
+	}
+
+.navbar-default .navbar-toggle .icon-bar {
+		background-color: @md-light-blue;
+	}
+
+.navbar-default .navbar-toggle:focus,
+	.navbar-default .navbar-toggle:hover {
+		background-color: @md-dark-blue;
+	}
+
+.navbar-default .navbar-collapse,
+	.navbar-default .navbar-form {
+		border-color: @md-dark-blue;
+	}
+
+2.6.Search bar
+
+2.6.1.Let's update "header.ejs"- Go back to the <div> tag we setup earlier with the #header-search ID.
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search for...">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">Go!</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+2.6.2.Let's update "theme.less".
+
+#header-search {
+    height: 60px;
+    background: @secondary-background;
+    padding: 0 (@padding * 1.5);
+}
+
+.container {
+    padding: 0 100px;
+}
+
+#header-search .input-group {
+    margin-top: 13px;
+}
+
+2.6.3.Search bar jQuery- Open up _layout.ejs and head to the bottom of the file.
+
+<script>
+	$(document).ready(function() {
+		$("#header-search").hide();
+		$("#search-trigger").on("click", function() {
+		$("#header-search").toggle();
+		});
+	});
+</script>
+
+2.7.Filters
+
+2.7.1.Let's update "theme.less".
+
+.header-filters {
+	background: @primary-background;
+	height: 60px;
+	line-height: 60px;
+}
+
+2.7.2.Let's update "header.ejs".
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+		<ul class="list-inline">
+			<li><a href="#" class="btn btn-primary btn-sm">Top Posts</a></li>
+			<li><a href="#" class="btn btn-primary btn-sm">Recent Posts</a></li>
+		</ul>
+		</div>
+	</div>
+</div>
+
+2.7.3.Let's update "theme.less".
+
+.btn-primary {
+	background: @md-pink;
+	border-color: @md-pink;
+	text-transform: uppercase;
+}
+
+.btn-primary:hover {
+	background: (@md-pink - #111);
+	border-color: (@md-pink - #111);
+}
+
+2.8.Setting up the footer- Open up the "_footer.ejs" partial.
+
+2.8.1.Let's update "_footer.ejs".
+
+<footer>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="list-inline">
+				<li><a href="#"><i class="fa official"></i></a></li>
+				<li><a href="#"><i class="fa square"></i></a></li>
+				<li><a href="#"><i class="fa square"></i></a></li>
+				<li><a href="#"><i class="fa square"></i></a></li>
+				</ul>
+				<p>&copy; 2016 Agger</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+2.8.2.Let's update "theme.less".
+
+footer {
+	margin-top: (@margin * 6);
+	padding-bottom: (@padding * 6);
+	padding-top: (@padding * 2);
+	background: @md-grey;
+	color: @md-light-grey;
+	text-align: center;
+}
+
+footer a {
+	font-size: (@font-size * 2);
+	color: @md-light-grey;
+}
+	
+footer a:hover {
+	color: @inverse-text;
+}
 
 
