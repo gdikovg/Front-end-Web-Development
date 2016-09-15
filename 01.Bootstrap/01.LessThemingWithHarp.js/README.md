@@ -811,9 +811,9 @@ border-radius: @radius;
 transition: background @transition;
 }
 
-2.4.Setting up the header
+3.Setting up the header
 
-2.4.1.Let's update "_header.ejs".
+3.1.Let's update "_header.ejs".
 
 <div class="header">
 	<div class="header-nav">
@@ -824,7 +824,7 @@ transition: background @transition;
 	</div>
 </div>
 
-2.4.2.Let's update "theme.less".
+3.2.Let's update "theme.less".
 
 .header {
 	margin-bottom: (@margin * 2);
@@ -834,9 +834,9 @@ transition: background @transition;
 	background: @md-blue;
 }
 
-2.5. Setting up the Navbar
+3.3. Setting up the Navbar
 
-2.5.1.Let's update "header.ejs".
+3.3.1.Let's update "header.ejs".
 
 <nav class="navbar navbar-default">
                     <div class="container">
@@ -855,7 +855,7 @@ transition: background @transition;
                     </div>
                 </nav>
 
-2.5.2.Let's update "theme.less".
+3.3.2.Let's update "theme.less".
 
 .navbar {
 	margin-bottom: 0;
@@ -911,9 +911,9 @@ transition: background @transition;
 		border-color: @md-dark-blue;
 	}
 
-2.6.Search bar
+3.4.Search bar
 
-2.6.1.Let's update "header.ejs"- Go back to the <div> tag we setup earlier with the #header-search ID.
+3.4.1.Let's update "header.ejs"- Go back to the <div> tag we setup earlier with the #header-search ID.
 
 <div class="container">
 	<div class="row">
@@ -928,7 +928,7 @@ transition: background @transition;
 	</div>
 </div>
 
-2.6.2.Let's update "theme.less".
+3.4.2.Let's update "theme.less".
 
 #header-search {
     height: 60px;
@@ -944,7 +944,7 @@ transition: background @transition;
     margin-top: 13px;
 }
 
-2.6.3.Search bar jQuery- Open up _layout.ejs and head to the bottom of the file.
+3.4.3.Search bar jQuery- Open up _layout.ejs and head to the bottom of the file.
 
 <script>
 	$(document).ready(function() {
@@ -955,9 +955,9 @@ transition: background @transition;
 	});
 </script>
 
-2.7.Filters
+3.5.Filters
 
-2.7.1.Let's update "theme.less".
+3.5.1.Let's update "theme.less".
 
 .header-filters {
 	background: @primary-background;
@@ -965,7 +965,7 @@ transition: background @transition;
 	line-height: 60px;
 }
 
-2.7.2.Let's update "header.ejs".
+3.5.2.Let's update "header.ejs".
 
 <div class="container">
 	<div class="row">
@@ -978,7 +978,7 @@ transition: background @transition;
 	</div>
 </div>
 
-2.7.3.Let's update "theme.less".
+3.5.3.Let's update "theme.less".
 
 .btn-primary {
 	background: @md-pink;
@@ -991,9 +991,9 @@ transition: background @transition;
 	border-color: (@md-pink - #111);
 }
 
-2.8.Setting up the footer- Open up the "_footer.ejs" partial.
+4.Setting up the footer- Open up the "_footer.ejs" partial.
 
-2.8.1.Let's update "_footer.ejs".
+4.1.Let's update "_footer.ejs".
 
 <footer>
 	<div class="container-fluid">
@@ -1011,7 +1011,7 @@ transition: background @transition;
 	</div>
 </footer>
 
-2.8.2.Let's update "theme.less".
+4.2.Let's update "theme.less".
 
 footer {
 	margin-top: (@margin * 6);
@@ -1029,6 +1029,359 @@ footer a {
 	
 footer a:hover {
 	color: @inverse-text;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+version 0.1- Single page apps
+
+5.Setting up the index page
+
+5.1.Let's update "index.ejs".
+
+<div class="col-xs-12 col-lg-8">
+...
+</div>
+
+<div class="col-xs-12 col-lg-3 col-lg-offset-1">
+...
+</div>
+
+5.2.Feed
+
+5.2.1.Let's update "index.ejs".
+
+<div class="feed">
+    <div class="well">
+        <h4>Aggregate your feeds with GdikovG.</h4> </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="post">
+                <h4><a href="#">Link Title Here</a><small>(url.com/goes/here)</small></h4>
+                <p><small>Posted 5 hours ago on <a href="#">Facebook</a></small></p>
+            </div>
+            <div class="post">
+                <h4><a href="#">Link Title Here Longer</a><small>(url.com/goes/here)</small></h4>
+                <p><small>Posted 5 hours ago on <a href="#">Twitter</a></small></p>
+            </div>
+            <div class="post">
+                <h4><a href="#">Link Title Here Much Longer</a><small>(url.com/goes/here)</small></h4>
+                <p><small>Posted 5 hours ago on <a href="#">Pintrest</a></small></p>
+            </div>
+            <div class="post">
+                <h4><a href="#">Link Title Here And Stuff</a><small>(url.com/goes/here)</small></h4>
+                <p><small>Posted 5 hours ago on <a href="#">Linkedin</a></small></p>
+            </div>
+            <div class="post">
+                <h4><a href="#">Link Title Here Like Really Long One</a> <small>(url.com/goes/here)</small></h4>
+                <p><small>Posted 5 hours ago on <a href="#">Facebook</a></small></p>
+            </div>
+            <div class="post">
+                <h4><a href="#">Link Title Here For Days</a><small>(url.com/goes/here)</small></h4>
+                <p><small>Posted 5 hours ago on <a href="#">Twitter</a></small></p>
+            </div>
+            <div class="post">
+                <h4><a href="#">Link Title Here All-Time Longest Title</a> <small>(url.com/goes/here)</small></h4>
+                <p><small>Posted 5 hours ago on <a href="#">Pintrest</a></small></p>
+            </div>
+            <div class="post">
+                <h4><a href="#">Link Title Here</a><small>(url.com/goes/here)</small></h4>
+                <p><small>Posted 5 hours ago on <a href="#">Linkedin</a></small></p>
+            </div>
+        </div>
+    </div>
+    <!-- nav //-->
+    <div class="row">
+        <div class="col-lg-6 col-xs-6">
+            <div class="feed-pages"> <small>Page 1 of 21</small> </div>
+        </div>
+        <div class="col-lg-6 col-xs-6q">
+            <div class="feed-nav pull-right">
+                <button class="btn btn-primary">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+5.2.2.Let's update "theme.less".
+
+.feed {
+	background: @primary-background;
+	padding: (@padding * 2);
+	margin-bottom: (@margin * 2);
+	.round-corners;
+}
+
+5.2.3.Adding the feed header- Create a new component Less file in css / components called "_well.less".
+
+.well {
+	border: 0;
+	box-shadow: none;
+	.round-corners;
+}
+
+.feed .well {
+	background-color: @md-grey;
+	color: @white;
+}
+
+5.2.4.Filling in the posts section- Let's update "theme.less"
+
+.post {
+	padding-bottom: @padding;
+	border-bottom: @border-size @light-grey @border-type;
+	margin-top: (@margin * 2);
+}
+
+.post:first-child {
+	margin-top: 0;
+}
+
+.post small {
+	color: @md-light-grey;
+}
+
+.post small a {
+	color: @md-light-grey;
+	text-decoration: underline;
+}
+
+.post small a:hover {
+	color: @md-grey;
+}
+
+5.2.5.Filling in the posts section- Let's update "theme.less"
+
+.feed-nav,
+	.feed-pages {
+		margin-top: (@margin * 2);
+	}
+
+5.3.Sidebar
+
+5.3.1.Let's update "index.ejs".
+
+<div class="col-xs-12 col-lg-3 col-lg-offset-1">
+    <h4>Channels</h4>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" checked> Facebook </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" checked> Twitter </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" checked> Pintrest </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" checked> Linkedin </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Google+ </label>
+    </div>
+    <hr />
+    <h4>Filters</h4>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" checked> Comments </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Recent Comments </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Top Posts </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Recent Posts </label>
+    </div>
+    <hr />
+    <p><a href="#">RSS Feed</a></p>
+</div>
+
+5.4.About modal
+
+5.4.1.Let's update "index.ejs".
+
+<div class="modal fade" id="about-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria- hidden="true">&times;</span></button>
+                <h4 class="modal-title">About</h4> </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <p><img src="http://fillmurray.com/400/300"></p>
+                        <p>Pellentesque habitant morbi...</p>
+                        <p>Pellentesque habitant morbi...</p>
+                        <p>Pellentesque habitant morbi...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+5.4.2.Create a new Less component file in css / components called "_modal.less".
+
+.modal-dialog {
+	margin: 0;
+	width: auto;
+}
+
+.modal-backdrop {
+	background: @md-pink;
+	opacity: 0.9!important;
+}
+
+.modal-content {
+	background: none;
+	color: @inverse-text;
+	box-shadow: none;
+	border: 0;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+.modal-content p {
+	margin-bottom: (@margin * 1.5);
+}
+
+.modal-header {
+	border-bottom: 0;
+}
+
+.close {
+	color: @inverse-text;
+	text-shadow: none;
+	opacity: 1;
+}
+
+.modal a {
+	color: @inverse-text;
+	text-decoration: underline;
+}
+.modal a:hover {
+	color: @md-black;
+}
+
+5.5.The Contact modal- 
+5.5.1.Insert the following modal code below the About modal in index.ejs:
+
+<div class="modal fade" id="contact-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria- hidden="true">&times;</span></button>
+                <h4 class="modal-title">Contact</h4> </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <form>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control"> </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" class="form-control"> </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea class="form-control" rows="10"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+5.5.2.Update "_modal.less".
+
+.modal form {
+	margin-bottom: (@margin * 2);
+}
+
+.modal .form-control {
+	border: 0;
+	box-shadow: none;
+	.round-corners;
+}
+
+.modal .btn-default {
+	border: 0;
+}
+
+5.5.The Login modal- 
+5.5.1.Insert the following modal code below the Contact modal in index.ejs:
+
+<div class="modal fade" id="login-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Login</h4> </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <form>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" class="form-control"> </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control"> </div>
+                            <p><small><a href="#">Forgot Password?</a></small></p>
+                            <button type="submit" class="btn btn-default">Sign Up</button>
+                        </form>
+                        <p>If you don't have an account, you can <a href="#">Register Here</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+04.Wiki
+-----------------------------------------------------------------------------------------------------------------------------------------------
+version 0.0- I'll take you through the process of building pages such as the wiki home page, content page, and search results page. We'll also touch on creating some mobile-specific styles using media queries to optimize the layout for phones and tablets.
+
+1.Starting with Boilerplate
+
+2.Customizing the template.
+2.1.Open up the "_data.json".
+
+{
+"index": {
+	"pageTitle": "Bootstrap Wiki"
+	},
+	"article": {
+	"pageTitle": "Article"
+	},
+	"search-results": {
+	"pageTitle": "Search Results"
+	},
+	"profile": {
+	"pageTitle": "Profile"
+	}
 }
 
 
