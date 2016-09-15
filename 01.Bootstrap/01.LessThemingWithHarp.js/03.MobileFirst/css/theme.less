@@ -81,6 +81,39 @@ footer a:hover {
     color: @inverse-text;
 }
 
+.feed {
+    background: @primary-background;
+    padding: (@padding * 2);
+    margin-bottom: (@margin * 2);
+    .round-corners;
+}
+
+.post {
+    padding-bottom: @padding;
+    border-bottom: @border-size @light-grey @border-type;
+    margin-top: (@margin * 2);
+}
+
+.post:first-child {
+    margin-top: 0;
+}
+
+.post small {
+    color: @md-light-grey;
+}
+.post small a {
+    color: @md-light-grey;
+    text-decoration: underline;
+}
+.post small a:hover {
+    color: @md-grey;
+}
+
+.feed-nav,
+	.feed-pages {
+		margin-top: (@margin * 2);
+	}
+
 //2.Layout rules
 /*The layout section is dedicated to any custom classes that you've written for the layout of your project. This could be something simple, such as a header, or something more complex, such as a widget. If you're following best practices, your layout should only use classes. However, if you have used some IDs, you should include them here as well.*/
 
