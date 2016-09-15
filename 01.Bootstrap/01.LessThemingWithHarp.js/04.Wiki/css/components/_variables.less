@@ -1,0 +1,74 @@
+
+//Colors
+/*I like to define a fairly large color palette. It's a good idea over time to develop a library of colors that work well together.*/
+
+@black: #000;
+@dark-grey: #333;
+@grey: #ccc;
+@light-grey: #ebebeb;
+@off-white: #f5f5f5;
+@white: #ffffff;
+@blue1: #3498db;
+@blue2: #2980b9;
+@red1: #e74c3c;
+@red2: #c0392b;
+@yellow1: #f1c40f;
+@yellow2: #f39c12;
+@green1: #2ecc71;
+@green2: #27ae60;
+@orange1: #e67e22;
+@orange2: #d35400;
+@aqua1: #1abc9c;
+@aqua2: #16a085;
+@purple1: #9b59b6;
+@purple2: #8e44ad;
+@navy1: #34495e;
+@navy2: #2c3e50;
+
+//Backgrounds
+/*Note how these colors use a variable name for their value and not a hexadecimal value. The variable naming convention here is similar to that of Bootstrap, for consistency.*/
+
+@primary-background: @white;
+@secondary-background: @off-white;
+@third-background: @light-grey;
+@fourth-background: @grey;
+@inverse-background: @dark-grey;
+
+//Text
+/*Consistency is the key as it makes it easier to remember variable names. It is critical when you're dealing with a large framework that you make things as easy as possible to remember. Again, make sure you use color variables for the values here and not actual hexadecimal numbers.*/
+
+@primary-text: @dark-grey;
+@light-text: @light-grey;
+@loud-text: @black;
+@inverse-text: @white;
+@heading-text: @dark-grey;
+
+//Links
+/*Things such as hover states usually require a base color and a darker or lighter version of the same color to indicate a change in hovering.*/
+
+@primary-link-color: @blue1;
+@primary-link-color-hover: @blue2;
+
+//Borders
+/*You should always set your size to 1px . The reason for this is that you can use a Less operation like the following to increase the size of your border. Starting from 1px makes your operations simple and easy to follow for other developers who may be maintaining or editing your code.*/
+
+@border-color: @light-grey;
+@border-size: 1px;
+@border-type: solid;
+@border-focus: @grey;
+@secondary-border-color: @blue1;
+
+//Typography
+/*Make sure you define at least a body and a heading copy variable. Set the base font size as a pixel value. Set the actual font size to 1em and use this variable throughout your custom CSS. In this way, you will be using a relative value that is easier with operations. This is exactly the same as the preceding border example. I personally prefer to reset Bootstrap's line-height to 1.5 for easier math.*/
+
+@body-copy: "Helvetica Neue", helvetica, arial, verdana, sans-serif;
+@heading-copy: "Helvetica Neue", helvetica, arial, verdana, sans-serif;
+@base-font-size: 14px;
+@font-size: 1em;
+@base-line-height: 1.5;
+
+//Layout
+/*Both should be set to 1em for easy relative operations.*/
+
+@margin: 1em;
+@padding: 1em;
